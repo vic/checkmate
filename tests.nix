@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    (if inputs ? checkmate then { } else inputs.target.flakeModules.nix-unit)
+    inputs.target.flakeModules.nix-unit
     inputs.nix-unit.modules.flake.default
   ];
 
