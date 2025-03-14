@@ -14,6 +14,7 @@
           nix-unit
           nixpkgs
           nixpkgs-lib
+          import-tree
           ;
       };
     in
