@@ -2,7 +2,7 @@
   inputs = {
     # example target flake to be tested
     # override with something else.
-    target.url = "github:vic/import-tree";
+    target.url = "github:vic/checkmate?dir=example";
 
     nixpkgs.url = "github:nixos/nixpkgs/24.11";
     systems.url = "github:nix-systems/default";
