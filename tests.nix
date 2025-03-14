@@ -6,13 +6,18 @@
   ];
 
   perSystem = (
-    { lib, ... }:
+    { ... }:
+    let
+      fixedInputs = {
+        inherit (inputs)
+          flake-parts
+          nix-unit
+          nixpkgs
+          nixpkgs-lib
+          ;
+      };
+    in
     {
-      let
-        fixedInputs = {
-          inherit (inputs) flake-parts nix-unit nixpkgs nixpkgs-lib;
-        };
-      in
       nix-unit.inputs = fixedInputs;
 
       # Tests are defined by target, and imported bellow by `inputs.target.flakeModules.nix-unit`.
