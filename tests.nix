@@ -1,21 +1,23 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 {
-  perSystem = (
-    { ... }:
-    {
-      imports = [ inputs.mate.modules.perSystem.nix-unit ];
-      nix-unit = {
-        inherit inputs;
-      };
-    }
-  );
+  imports = [ inputs.mate.flakeModules.nix-unit ];
 
-  flake.modules.perSystem.nix-unit =
-    { lib, ... }:
+  # Example
+  flake.flakeModules.nix-unit =
+    { inputs, ... }:
     {
-      nix-unit.tests.checkmate-core."test lib works" = {
-        expr = lib.removeSuffix ".nix" "hello.nix";
-        expected = "hello";
-      };
+      perSystem = (
+        { ... }:
+        {
+          nix-unit = {
+            inherit inputs;
+            tests.checkmate-core."test lib works" = {
+              expr = lib.removeSuffix ".nix" "hello.nix";
+              expected = "hello";
+            };
+          };
+        }
+      );
     };
+
 }

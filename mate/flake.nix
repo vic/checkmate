@@ -1,15 +1,24 @@
 {
-  outputs = _: {
+  outputs = _inputs: {
 
-    # Expose a `nix-unit` module with `perSystem` class.
-    # see https://flake.parts/options/flake-parts-modules.html
-    modules.perSystem.nix-unit =
-      { lib, ... }:
+    # Example
+    flakeModules.nix-unit =
+      { inputs, ... }:
       {
-        nix-unit.tests.checkmate-mate."test lib works" = {
-          expr = lib.removePrefix "hello" "hello.nix";
-          expected = ".nix";
-        };
+        perSystem = (
+          { lib, ... }:
+          {
+            nix-unit = {
+              inherit inputs;
+              tests.checkmate-mate."test lib works" = {
+                expr = lib.removeSuffix ".nix" "hello.nix";
+                expected = "hello";
+              };
+            };
+          }
+        );
       };
+
   };
+
 }

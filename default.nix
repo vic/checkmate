@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.flake-parts.flakeModules.flakeModules
-    inputs.flake-parts.flakeModules.modules
     inputs.nix-unit.modules.flake.default
     ./tests.nix
     ./treefmt.nix
