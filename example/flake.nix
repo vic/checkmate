@@ -1,16 +1,15 @@
 {
-  outputs = _inputs: {
+  outputs = _: {
 
     # Example
     flakeModules.nix-unit =
-      { inputs, ... }:
+      { ... }:
       {
         perSystem = (
           { lib, ... }:
           {
-            nix-unit = {
-              inherit inputs;
-              tests.checkmate-mate."test lib works" = {
+            nix-unit.tests = {
+              checkmate."test lib works" = {
                 expr = lib.removeSuffix ".nix" "hello.nix";
                 expected = "hello";
               };

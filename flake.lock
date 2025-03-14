@@ -20,18 +20,6 @@
         "type": "github"
       }
     },
-    "mate": {
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-9pHtj4zOvGLS1yOHfqWhKZTCwXLKoRoS0PSPYWF7t6A=",
-        "path": "mate",
-        "type": "path"
-      },
-      "original": {
-        "path": "mate",
-        "type": "path"
-      }
-    },
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
@@ -112,11 +100,11 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "mate": "mate",
         "nix-unit": "nix-unit",
         "nixpkgs": "nixpkgs",
         "nixpkgs-lib": "nixpkgs-lib",
         "systems": "systems",
+        "target": "target",
         "treefmt-nix": "treefmt-nix_2"
       }
     },
@@ -132,6 +120,21 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "target": {
+      "locked": {
+        "lastModified": 1741990967,
+        "narHash": "sha256-yBVGs2FB9J3z1wx3ViNYKTf0ix9ywkit2LSPsFGQ4co=",
+        "owner": "vic",
+        "repo": "import-tree",
+        "rev": "3d1bd54ed6483dfeb8c7777ad935d81584de6d5b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "import-tree",
         "type": "github"
       }
     },
