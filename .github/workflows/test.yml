@@ -11,6 +11,6 @@ jobs:
       - uses: cachix/install-nix-action@v30
       - run: nix run -L .#checkmate-treefmt -- --ci $PWD
       - run: nix flake check -L --override-input target path:$PWD/example
-      - run: 
-          | nix flake check -L --override-input target path:$PWD/failing-example || touch did-failed
-          | test -f did-failed
+      - run: |
+          nix flake check -L --override-input target path:$PWD/failing-example || touch did-failed
+          test -f did-failed
