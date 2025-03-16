@@ -10,15 +10,7 @@
   perSystem = (
     { ... }:
     let
-      fixedInputs = {
-        inherit (inputs)
-          flake-parts
-          nix-unit
-          nixpkgs
-          nixpkgs-lib
-          target
-          ;
-      };
+      fixedInputs = inputs // inputs.target.inputs;
     in
     {
       nix-unit.allowNetwork = true;
