@@ -13,4 +13,10 @@ in
 {
   imports = [ flakeModule ];
   flake.flakeModules.default = flakeModule;
+
+  flake.lib.mkFlake =
+    newInputs:
+    inputs.flake-parts.mkFlake {
+      inputs = inputs // newInputs // { target = newInputs.self; };
+    } flakeModule;
 }
