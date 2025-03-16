@@ -4,22 +4,29 @@ Checks include:
 
 - treefmt - nixfmt, deadnix, mdformat, yamlfmt. See `treefmt.nix`.
 
-- nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.nix-unit`:
+- nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
 
 ```nix
 # Example
-flakeModules.nix-unit =
+flakeModules.checkmate =
   { inputs, ... }:
+  let
+    self = inputs.target; # your flake being tested
+    some-dep = self.inputs.some-dep; # access your flake dependencies via the target.
+  in
   {
     perSystem = (
-      { lib, ... }:
+      { lib, pkgs, ... }:
       {
         nix-unit.tests = {
-          checkmate."test lib works" = {
+          "test lib works" = {
             expr = lib.removeSuffix ".nix" "hello.nix";
             expected = "hello";
           };
         };
+
+        # add any other derivations to check
+        # checks.<name> = <derivation>;
       }
     );
   };
