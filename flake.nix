@@ -16,5 +16,5 @@
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: import ./. inputs;
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } ./flakeModule.nix;
 }
