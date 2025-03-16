@@ -2,7 +2,7 @@ inputs:
 let
   functor =
     _: newInputs: newModule:
-    inputs.flake-parts.mkFlake
+    inputs.flake-parts.lib.mkFlake
       {
         inputs =
           inputs
