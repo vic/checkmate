@@ -30,6 +30,7 @@ flakeModules.checkmate =
       }
     );
   };
+```
 
 ### Running treefmt on your code
 
@@ -73,4 +74,4 @@ $GITHUB_SHA
 As a fully working example, see:
 
 https://github.com/vic/import-tree
-````
+
