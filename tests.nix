@@ -16,6 +16,7 @@
           nix-unit
           nixpkgs
           nixpkgs-lib
+          target
           ;
       };
     in
