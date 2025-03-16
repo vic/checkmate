@@ -6,7 +6,7 @@ Checks include:
 
 - nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
 
-````nix
+```nix
 # Example
 flakeModules.checkmate =
   { inputs, ... }:
