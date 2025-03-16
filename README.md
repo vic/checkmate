@@ -34,11 +34,11 @@ flakeModules.checkmate =
 ### Running treefmt on your code
 
 ```shell
-# see if code is formatted
-nix run github:vic/checkmate#check-treefmt --override-input target path:$PWD -L
-
 # formatting your code
 nix run github:vic/checkmate#treefmt -- $PWD
+
+# see if code is formatted
+nix run github:vic/checkmate#treefmt -- --ci $PWD
 ````
 
 ### Running nix-unit tests locally

@@ -16,7 +16,6 @@
     in
     {
       packages.treefmt = treefmt-wrapper;
-      packages.check-treefmt = treefmt-check;
       checks.checkmate-treefmt = treefmt-check;
       lib.checkmate-treefmt = treefmt.config.build.check;
     }
