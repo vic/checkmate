@@ -1,21 +1,7 @@
-{ inputs, ... }:
+inputs:
 let
-  flakeModule = {
-    systems = import inputs.systems;
-    imports = [
-      inputs.flake-parts.flakeModules.flakeModules
-      ./perSystem-lib.nix
-      ./tests.nix
-      ./treefmt.nix
-    ];
-  };
-in
-{
-  imports = [ flakeModule ];
-  flake.flakeModules.default = flakeModule;
-
-  flake.lib.mkFlake =
-    newInputs: newModule:
+  functor =
+    _: newInputs: newModule:
     inputs.flake-parts.mkFlake
       {
         inputs =
@@ -33,7 +19,11 @@ in
       {
         imports = [
           newModule
-          flakeModule
+          ./flakeModule.nix
         ];
       };
-}
+
+  flake = inputs.flake-parts.lib.mkFlake { inherit inputs; } ./flakeModule.nix;
+
+in
+flake // { __functor = functor; }
