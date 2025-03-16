@@ -1,20 +1,17 @@
 inputs:
 let
   functor =
-    _: newInputs: newModule:
+    _: target: newModule:
     inputs.flake-parts.lib.mkFlake
       {
-        inputs =
-          inputs
-          // newInputs
-          // {
-            target = newInputs.self;
-            checkmate = inputs.self // {
-              inputs = inputs.self.inputs // {
-                target = newInputs.self;
-              };
+        inputs = inputs // {
+          inherit target;
+          self = inputs.self // {
+            inputs = inputs.self.inputs // {
+              inherit target;
             };
           };
+        };
       }
       {
         imports = [
