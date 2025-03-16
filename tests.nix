@@ -9,10 +9,12 @@
   ];
 
   perSystem = (
-    { ... }:
+    { self', ... }:
     {
       nix-unit.allowNetwork = true;
       nix-unit.inputs = inputs;
+
+      packages.check-nix-unit = self'.checks.nix-unit;
     }
   );
 }

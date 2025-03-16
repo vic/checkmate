@@ -15,7 +15,8 @@
       treefmt-check = treefmt.config.build.check inputs.target;
     in
     {
-      packages.checkmate-treefmt = treefmt-wrapper;
+      packages.treefmt = treefmt-wrapper;
+      packages.check-treefmt = treefmt-check;
       checks.checkmate-treefmt = treefmt-check;
       lib.checkmate-treefmt = treefmt.config.build.check;
     }

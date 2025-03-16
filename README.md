@@ -6,7 +6,7 @@ Checks include:
 
 - nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
 
-```nix
+````nix
 # Example
 flakeModules.checkmate =
   { inputs, ... }:
@@ -30,6 +30,21 @@ flakeModules.checkmate =
       }
     );
   };
+
+### Running treefmt on your code
+
+```shell
+# see if code is formatted
+nix run github:vic/checkmate#check-treefmt --override-input target path:$PWD -L
+
+# formatting your code
+nix run github:vic/checkmate#treefmt -- $PWD
+````
+
+### Running nix-unit tests locally
+
+```shell
+nix run github:vic/checkmate#check-nix-unit --override-input target path:$PWD -L
 ```
 
 ### CI Usage
