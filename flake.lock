@@ -144,11 +144,11 @@
       },
       "locked": {
         "dir": "example",
-        "lastModified": 1742102447,
-        "narHash": "sha256-cuIKVqExacKJjH1QpisW4ZOsaKMgcrTZugsVDhHQAo0=",
+        "lastModified": 1742104932,
+        "narHash": "sha256-kS63yEO1quwrQoTErrM2Ye7HGG0Sgqb3uOc8cUvrvL0=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "37ca3492dcf09a38f861d998f4220a406652b3b8",
+        "rev": "e18fde740f65f3166ee37b907863baba86a0c8e9",
         "type": "github"
       },
       "original": {
