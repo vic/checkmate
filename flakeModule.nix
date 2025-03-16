@@ -6,4 +6,9 @@
     ./tests.nix
     ./treefmt.nix
   ];
+
+  flake.templates.default = {
+    description = "Sample flake";
+    path = ./templates/default;
+  };
 }
