@@ -6,11 +6,6 @@ let
       {
         inputs = inputs // {
           inherit target;
-          self = inputs.self // {
-            inputs = inputs.self.inputs // {
-              inherit target;
-            };
-          };
         };
       }
       {
