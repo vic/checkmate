@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.flake-parts.flakeModules.flakeModules
+    ./perSystem-lib.nix
     ./tests.nix
     ./treefmt.nix
   ];

@@ -125,16 +125,16 @@
     },
     "target": {
       "locked": {
-        "dir": "example",
-        "lastModified": 1741992846,
-        "narHash": "sha256-SZiyH5Jt/ttwV4BWc2INPU1m7Lg9g0zuife9FYX/WxU=",
+        "dir": "failing-example",
+        "lastModified": 1741997435,
+        "narHash": "sha256-ts96p7eRdqWrhXKE+mi1cd/y0JYUJ6cjfXY891Y6z9E=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "0bcfed86ea051b32deb044e12d6834aa766e8f51",
+        "rev": "a0da6422393f5e7b1fb4e825ac02720f6db28153",
         "type": "github"
       },
       "original": {
-        "dir": "example",
+        "dir": "failing-example",
         "owner": "vic",
         "repo": "checkmate",
         "type": "github"
