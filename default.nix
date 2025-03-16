@@ -18,7 +18,17 @@ in
     newInputs: newModule:
     inputs.flake-parts.mkFlake
       {
-        inputs = inputs // newInputs // { target = newInputs.self; };
+        inputs =
+          inputs
+          // newInputs
+          // {
+            target = newInputs.self;
+            checkmate = inputs.self // {
+              inputs = inputs.self.inputs // {
+                target = newInputs.self;
+              };
+            };
+          };
       }
       {
         imports = [
