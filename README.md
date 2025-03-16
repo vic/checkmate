@@ -27,7 +27,23 @@ flakeModules.nix-unit =
 
 ### CI Usage
 
+On your github action:
+
+```yaml
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  flake-check:
+    name: nix flake check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cachix/install-nix-action@v30
+      - run: nix flake check -L github:vic/checkmate --override-input target github:$GITHUB_REPOSITORY/
+$GITHUB_SHA
 ```
-# On your github action
-nix check github:checkmate --override-input target path:$PWD -L --refresh
-```
+
+As a fully working example, see:
+
+https://github.com/vic/import-tree
