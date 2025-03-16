@@ -39,12 +39,16 @@ nix run github:vic/checkmate#treefmt -- $PWD
 
 # see if code is formatted
 nix run github:vic/checkmate#treefmt -- --ci $PWD
-````
+```
 
 ### Running nix-unit tests locally
 
 ```shell
-nix run github:vic/checkmate#check-nix-unit --override-input target path:$PWD -L
+# Since nix-unit runs on a sandbox the following will not work (probably a nix-unit issue?)
+# nix run github:vic/checkmate#check-nix-unit --override-input target path:$PWD -L
+
+# Instead you'll need to have to make a commit and run: (--refresh ensures you test the latest commit)
+nix run github:vic/checkmate#check-nix-unit --override-input target git:$PWD -L --refresh
 ```
 
 ### CI Usage
@@ -69,3 +73,4 @@ $GITHUB_SHA
 As a fully working example, see:
 
 https://github.com/vic/import-tree
+````
