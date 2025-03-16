@@ -6,30 +6,11 @@ Checks include:
 
 - nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
 
-```nix
-# Example
-flakeModules.checkmate =
-  { inputs, ... }:
-  let
-    self = inputs.target; # your flake being tested
-    some-dep = self.inputs.some-dep; # access your flake dependencies via the target.
-  in
-  {
-    perSystem = (
-      { lib, pkgs, ... }:
-      {
-        nix-unit.tests = {
-          "test lib works" = {
-            expr = lib.removeSuffix ".nix" "hello.nix";
-            expected = "hello";
-          };
-        };
+> See [import-tree](https://github.com/vic/import-tree/blob/main/checks/checkmate.nix) or [example](https://github.com/vic/checkmate/blob/main/example/checkmate.nix)
 
-        # add any other derivations to check
-        # checks.<name> = <derivation>;
-      }
-    );
-  };
+```shell
+# Generate a new project including github CI action
+nix flake new -t github:vic/checkmate
 ```
 
 ### Running treefmt on your code
