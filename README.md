@@ -29,5 +29,5 @@ flakeModules.nix-unit =
 
 ```
 # On your github action
-nix check github:checkmate --override-input target path:$PWD
+nix check github:checkmate --override-input target path:$PWD -L --refresh
 ```

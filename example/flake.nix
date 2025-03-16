@@ -1,19 +1,19 @@
 {
-  inputs.empty.url = "github:vic/empty-flake"; # example dependency
+  inputs.dep.url = "github:nix-systems/x86_64-linux"; # example dependency
 
   outputs = _inputs: {
 
     # Example
     flakeModules.nix-unit =
-      { ... }: # you can access inputs.target.inputs.empty from here
+      { inputs, ... }:
       {
         perSystem = (
           { lib, ... }:
           {
             nix-unit.tests = {
-              checkmate."test lib works" = {
-                expr = lib.removeSuffix ".nix" "hello.nix";
-                expected = "hello";
+              checkmate."test access inputs via target" = {
+                expr = lib.removePrefix "x86_64-" (lib.elemAt (import inputs.target.inputs.dep) 0);
+                expected = "linux";
               };
             };
           }

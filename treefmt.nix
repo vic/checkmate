@@ -12,7 +12,7 @@
         programs.yamlfmt.enable = true;
       };
       treefmt-wrapper = treefmt.config.build.wrapper;
-      treefmt-check = treefmt.config.build.check inputs.target;
+      treefmt-check = treefmt.config.build.check (inputs.target or inputs.self);
     in
     {
       packages.checkmate-treefmt = treefmt-wrapper;

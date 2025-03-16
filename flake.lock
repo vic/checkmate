@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "empty": {
+      "locked": {
+        "lastModified": 1741993073,
+        "narHash": "sha256-hTJPMh9Bwky2TlaWmLrkBHdUBmpxSCPRK+bmnFNpNQE=",
+        "owner": "vic",
+        "repo": "empty-flake",
+        "rev": "a402c2c33ff3f5010eb0357d8228f27fb7083cbd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "empty-flake",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -124,17 +139,20 @@
       }
     },
     "target": {
+      "inputs": {
+        "empty": "empty"
+      },
       "locked": {
-        "dir": "failing-example",
-        "lastModified": 1742084732,
-        "narHash": "sha256-yoe7izv/Cl/qkCyn3HzsPAwlWNlTTeI6waBiIJEoMaY=",
+        "dir": "example",
+        "lastModified": 1742085978,
+        "narHash": "sha256-G4yl2Kdrx2vI0qJ7EUgFd6eaadcngjg37XDzDBbpSWg=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "9132a1ffd6cca2527aae6e669976940ae6e6f030",
+        "rev": "af3b609faa00ef97b2fc2ca81f400249f80169af",
         "type": "github"
       },
       "original": {
-        "dir": "failing-example",
+        "dir": "example",
         "owner": "vic",
         "repo": "checkmate",
         "type": "github"
