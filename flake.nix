@@ -2,13 +2,12 @@
   inputs = {
     # example target flake to be tested
     # override with something else.
-    target.url = "github:vic/checkmate?dir=example";
+    target.url = "github:vic/checkmate?dir=templates/default";
 
-    nixpkgs.url = "github:nixos/nixpkgs/24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
     systems.url = "github:nix-systems/default";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs-lib";
-    nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
     nix-unit.url = "github:nix-community/nix-unit";
     nix-unit.inputs.nixpkgs.follows = "nixpkgs";
     nix-unit.inputs.flake-parts.follows = "flake-parts";
@@ -16,5 +15,5 @@
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } ./flakeModule.nix;
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } ./.;
 }
