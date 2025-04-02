@@ -17,6 +17,8 @@ let
       { pkgs, self', ... }:
       {
         packages.fmt = self'.formatter;
+        packages.test = self'.checks.nix-unit;
+        packages.test-fmt = self'.checks.treefmt;
 
         packages.default = pkgs.writeShellApplication {
           name = "flake-check";
