@@ -13,26 +13,6 @@ let
       ./flakeModule.nix
       checkmate
     ];
-    perSystem =
-      { pkgs, self', ... }:
-      {
-        packages.fmt = self'.formatter;
-        packages.test = self'.checks.nix-unit;
-        packages.test-fmt = self'.checks.treefmt;
-
-        packages.default = pkgs.writeShellApplication {
-          name = "flake-check";
-          text = ''
-            (
-             if test -f checkmate/flake.nix; then
-               cd checkmate
-             fi
-             nix flake update target
-             nix flake check
-            )
-          '';
-        };
-      };
   };
 in
 {
