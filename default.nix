@@ -20,7 +20,9 @@ let
           name = "flake-check";
           text = ''
             (
-             test -f checkmate/flake.nix && cd checkmate || true
+             if test -f checkmate/flake.nix; then
+               cd checkmate
+             fi
              nix flake update target
              nix flake check
             )
