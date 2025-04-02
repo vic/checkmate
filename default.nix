@@ -14,8 +14,10 @@ let
       checkmate
     ];
     perSystem =
-      { pkgs, ... }:
+      { pkgs, self', ... }:
       {
+        packages.fmt = self'.formatter;
+
         packages.default = pkgs.writeShellApplication {
           name = "flake-check";
           text = ''
