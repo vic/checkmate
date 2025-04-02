@@ -13,6 +13,20 @@ let
       ./flakeModule.nix
       checkmate
     ];
+    perSystem =
+      { pkgs, ... }:
+      {
+        packages.default = pkgs.writeShellApplication {
+          name = "flake-check";
+          text = ''
+            (
+             test -f checkmate/flake.nix && cd checkmate || true
+             nix flake update target
+             nix flake check
+            )
+          '';
+        };
+      };
   };
 in
 {
