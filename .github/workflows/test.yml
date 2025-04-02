@@ -17,4 +17,5 @@ jobs:
       - name: self
         run: |
           git worktree add myself
+          rm -rf myself/.git
           nix flake check -L --override-input target path:$PWD/myself
