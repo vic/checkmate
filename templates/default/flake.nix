@@ -1,5 +1,5 @@
 {
   outputs = _: {
-    lib.dup = a: a * 2;
+    lib.dup = x: x * 2;
   };
 }

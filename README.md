@@ -1,47 +1,32 @@
-<p align="right">
-  <a href="https://github.com/sponsors/vic"><img src="https://img.shields.io/badge/sponsor-vic-white?logo=githubsponsors&logoColor=white&labelColor=%23FF0000" alt="Sponsor Vic"/>
-  </a>
-  <a href="https://vic.github.io/dendrix/Dendritic-Ecosystem.html#vics-dendritic-libraries"> <img src="https://img.shields.io/badge/Dendritic-Nix-informational?logo=nixos&logoColor=white" alt="Dendritic Nix"/> </a>
-  <a href="LICENSE"> <img src="https://img.shields.io/github/license/vic/checkmate" alt="License"/> </a>
-  <a href="https://github.com/vic/checkmate/actions">
-  <img src="https://github.com/vic/checkmate/actions/workflows/test.yml/badge.svg" alt="CI Status"/> </a>
-</p>
+# Checkmate - A flake checker (treefmt & nix-unit) for testing other flakes with zero dependencies.
 
-# Checkmate - A Dendritic flake checker (treefmt & nix-unit) for testing other flakes with zero dependencies.
-
-> `checkmate` and [vic](https://bsky.app/profile/oeiuwq.bsky.social)'s [dendritic libs](https://vic.github.io/dendrix/Dendritic-Ecosystem.html#vics-dendritic-libraries) made for you with Love++ and AI--. If you like my work, consider [sponsoring](https://github.com/sponsors/vic)
-
-### Checks included by default
+Checks include:
 
 - treefmt - nixfmt, deadnix, mdformat, yamlfmt. See `treefmt.nix`.
 
 - nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
 
-### Extensible.
-
-Checkmate is a collection of Denritic modules.
-
-### Getting started
+> See [import-tree](https://github.com/vic/import-tree/blob/main/checks/checkmate.nix) or [example](https://github.com/vic/checkmate/blob/main/example/checkmate.nix)
 
 ```shell
 # Generate a new project including github CI action
 nix flake new -t github:vic/checkmate
 ```
 
-### Running flake check locally
-
-```console
-nix flake check github:vic/checkmate --override-input target .
-```
-
 ### Running treefmt on your code
 
-```console
+```shell
 # formatting your code
-nix run github:vic/checkmate#fmt --override-input target .
+nix run path:checkmate#fmt
 
 # checking if code is formatted
-nix run github:vic/checkmate#fmt --override-input target . -- --ci
+nix run path:checkmate#fmt -- --ci
+```
+
+### Running flake check locally
+
+```shell
+nix run path:checkmate
 ```
 
 ### CI Usage
