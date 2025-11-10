@@ -4,18 +4,11 @@ on:
     branches: [main]
 jobs:
   flake-check:
-    name: nix flake check
+    strategy:
+      matrix:
+        dir: [".", "./templates/success"]
+    name: flake check ${{matrix.dir}}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v30
-      - run: nix flake check -L --override-input target path:$PWD/templates/default
-      - run: nix flake check -L --override-input target path:$PWD/templates/success
-      - run: |
-          nix flake check -L --override-input target path:$PWD/templates/failure || touch did-failed
-          test -f did-failed
-      - name: self
-        run: |
-          git worktree add myself
-          rm -rf myself/.git
-          nix flake check -L --override-input target path:$PWD/myself
+      - run: nix flake check -L github:$GITHUB_REPOSITORY/$GITHUB_SHA --override-input target github:$GITHUB_REPOSITORY/$GITHUB_SHA?dir=${{matrix.dir}}

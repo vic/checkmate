@@ -1,32 +1,10 @@
-{ inputs, ... }:
 let
-  checkmate =
-    inputs.target.flakeModules.checkmate or (
-      if builtins.pathExists "${inputs.target}/checkmate.nix" then
-        "${inputs.target}/checkmate.nix"
-      else
-        { }
-    );
-
-  newFlake = inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [
-      ./flakeModule.nix
-      checkmate
-    ];
+  rev = "9100a0f";
+  narHash = "sha256:09m84vsz1py50giyfpx0fpc7a4i0r1xsb54dh0dpdg308lp4p188";
+  compat = fetchTarball {
+    url = "https://github.com/edolstra/flake-compat/archive/${rev}.tar.gz";
+    sha256 = narHash;
   };
+  flake = import compat { src = ./.; };
 in
-{
-  imports = [
-    ./flakeModule.nix
-    checkmate
-  ];
-
-  flake.lib.newFlake = newFlake;
-
-  flake.flakeModule = ./flakeModule.nix;
-
-  flake.templates.default = {
-    description = "Sample flake";
-    path = ./templates/default;
-  };
-}
+flake.outputs
