@@ -6,9 +6,13 @@ jobs:
   flake-check:
     strategy:
       matrix:
-        dir: [".", "./templates/success"]
+        checker: ["./"]
+        target: ["./", "./templates/success"]
+        include:
+          - checker: "./templates/dendritic/checkmate"
+            target: "./templates/dendritic"
     name: flake check ${{matrix.dir}}
     runs-on: ubuntu-latest
     steps:
       - uses: cachix/install-nix-action@v30
-      - run: nix flake check -L github:$GITHUB_REPOSITORY/$GITHUB_SHA --override-input target github:$GITHUB_REPOSITORY/$GITHUB_SHA?dir=${{matrix.dir}}
+      - run: nix flake check -L github:$GITHUB_REPOSITORY/$GITHUB_SHA?dir=${{matrix.checker}} --override-input target github:$GITHUB_REPOSITORY/$GITHUB_SHA?dir=${{matrix.target}}
