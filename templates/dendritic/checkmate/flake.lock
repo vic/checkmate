@@ -38,11 +38,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763693729,
-        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
+        "lastModified": 1763694353,
+        "narHash": "sha256-W5U42yzaKukUDDggnq1gaVo8dATcuDoj5kVt7cqFD6E=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
+        "rev": "f2bbf487cb5e730f357faef65ecb73fa12a568b5",
         "type": "github"
       },
       "original": {
@@ -53,6 +53,7 @@
     },
     "checkmate_2": {
       "inputs": {
+        "checkmate": "checkmate_3",
         "den": [
           "checkmate",
           "den"
@@ -94,6 +95,78 @@
           "target"
         ],
         "treefmt-nix": [
+          "checkmate",
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763693729,
+        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
+        "owner": "vic",
+        "repo": "checkmate",
+        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "checkmate",
+        "type": "github"
+      }
+    },
+    "checkmate_3": {
+      "inputs": {
+        "den": [
+          "checkmate",
+          "checkmate",
+          "den"
+        ],
+        "flake-aspects": [
+          "checkmate",
+          "checkmate",
+          "flake-aspects"
+        ],
+        "flake-file": [
+          "checkmate",
+          "checkmate",
+          "flake-file"
+        ],
+        "flake-parts": [
+          "checkmate",
+          "checkmate",
+          "flake-parts"
+        ],
+        "import-tree": [
+          "checkmate",
+          "checkmate",
+          "import-tree"
+        ],
+        "nix-unit": [
+          "checkmate",
+          "checkmate",
+          "nix-unit"
+        ],
+        "nixpkgs": [
+          "checkmate",
+          "checkmate",
+          "nixpkgs"
+        ],
+        "nixpkgs-lib": [
+          "checkmate",
+          "checkmate",
+          "nixpkgs"
+        ],
+        "systems": [
+          "checkmate",
+          "checkmate",
+          "systems"
+        ],
+        "target": [
+          "checkmate",
+          "checkmate",
+          "target"
+        ],
+        "treefmt-nix": [
+          "checkmate",
           "checkmate",
           "treefmt-nix"
         ]
@@ -290,11 +363,11 @@
     "target": {
       "locked": {
         "dir": "templates/dendritic",
-        "lastModified": 1763693729,
-        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
+        "lastModified": 1763694353,
+        "narHash": "sha256-W5U42yzaKukUDDggnq1gaVo8dATcuDoj5kVt7cqFD6E=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
+        "rev": "f2bbf487cb5e730f357faef65ecb73fa12a568b5",
         "type": "github"
       },
       "original": {
