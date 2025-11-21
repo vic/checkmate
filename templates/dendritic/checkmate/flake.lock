@@ -2,6 +2,7 @@
   "nodes": {
     "checkmate": {
       "inputs": {
+        "checkmate": "checkmate_2",
         "den": [
           "den"
         ],
@@ -33,6 +34,67 @@
           "target"
         ],
         "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763693729,
+        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
+        "owner": "vic",
+        "repo": "checkmate",
+        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "checkmate",
+        "type": "github"
+      }
+    },
+    "checkmate_2": {
+      "inputs": {
+        "den": [
+          "checkmate",
+          "den"
+        ],
+        "flake-aspects": [
+          "checkmate",
+          "flake-aspects"
+        ],
+        "flake-file": [
+          "checkmate",
+          "flake-file"
+        ],
+        "flake-parts": [
+          "checkmate",
+          "flake-parts"
+        ],
+        "import-tree": [
+          "checkmate",
+          "import-tree"
+        ],
+        "nix-unit": [
+          "checkmate",
+          "nix-unit"
+        ],
+        "nixpkgs": [
+          "checkmate",
+          "nixpkgs"
+        ],
+        "nixpkgs-lib": [
+          "checkmate",
+          "nixpkgs"
+        ],
+        "systems": [
+          "checkmate",
+          "systems"
+        ],
+        "target": [
+          "checkmate",
+          "target"
+        ],
+        "treefmt-nix": [
+          "checkmate",
           "treefmt-nix"
         ]
       },
@@ -228,11 +290,11 @@
     "target": {
       "locked": {
         "dir": "templates/dendritic",
-        "lastModified": 1763688964,
-        "narHash": "sha256-xJ3g37BgPgIKNrUT9wo/QCDXpo5P/KZA3wjT9ETmc8o=",
+        "lastModified": 1763693729,
+        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "7add32917422eb14bf09560f9686d19232745ae1",
+        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
         "type": "github"
       },
       "original": {
