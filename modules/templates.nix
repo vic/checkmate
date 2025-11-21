@@ -7,11 +7,4 @@
     description = "Dendritic";
     path = ../templates/dendritic;
   };
-  flake.flakeModule =
-    { inputs, ... }:
-    {
-      imports = [
-        (inputs.import-tree ./checkmate)
-      ];
-    };
 }

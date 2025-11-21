@@ -1,5 +1,5 @@
-{ inputs, lib, ... }:
+{ inputs, ... }:
 {
-  flake-file.inputs.checkmate.url = lib.mkDefault "github:vic/checkmate";
+  flake-file.inputs.target.url = "github:vic/checkmate?dir=templates/dendritic";
   imports = [ (inputs.checkmate.flakeModule or { }) ];
 }
