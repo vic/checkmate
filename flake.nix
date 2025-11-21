@@ -5,22 +5,6 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
-    checkmate = {
-      inputs = {
-        den.follows = "den";
-        flake-aspects.follows = "flake-aspects";
-        flake-file.follows = "flake-file";
-        flake-parts.follows = "flake-parts";
-        import-tree.follows = "import-tree";
-        nix-unit.follows = "nix-unit";
-        nixpkgs.follows = "nixpkgs";
-        nixpkgs-lib.follows = "nixpkgs";
-        systems.follows = "systems";
-        target.follows = "target";
-        treefmt-nix.follows = "treefmt-nix";
-      };
-      url = "github:vic/checkmate";
-    };
     den.url = "github:vic/den";
     flake-aspects.url = "github:vic/flake-aspects";
     flake-file.url = "github:vic/flake-file";
