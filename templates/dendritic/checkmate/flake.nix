@@ -20,7 +20,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-lib.follows = "nixpkgs";
     systems.url = "github:nix-systems/default";
-    target.url = "path:..";
+    target.url = "github:vic/checkmate?dir=templates/dendritic";
   };
 
 }

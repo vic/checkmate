@@ -4,11 +4,11 @@
       "flake": false,
       "locked": {
         "dir": "modules/checkmate",
-        "lastModified": 1763687073,
-        "narHash": "sha256-SaP08ABfJY3wIUdJw5/XkAbbz3Jw+Bmj8FtJJqktI2k=",
+        "lastModified": 1763688069,
+        "narHash": "sha256-1mK38cB+dTFh6gieuqWswqbWAbV/cGrqiR+r6ONSL5s=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "3cb30f412d96c7fec12dcd1c965f532d844743bf",
+        "rev": "52665a9ad341f0b11620aabbd8ede55af6638c06",
         "type": "github"
       },
       "original": {
@@ -147,14 +147,20 @@
     },
     "target": {
       "locked": {
-        "path": "..",
-        "type": "path"
+        "dir": "templates/dendritic",
+        "lastModified": 1763688069,
+        "narHash": "sha256-1mK38cB+dTFh6gieuqWswqbWAbV/cGrqiR+r6ONSL5s=",
+        "owner": "vic",
+        "repo": "checkmate",
+        "rev": "52665a9ad341f0b11620aabbd8ede55af6638c06",
+        "type": "github"
       },
       "original": {
-        "path": "..",
-        "type": "path"
-      },
-      "parent": []
+        "dir": "templates/dendritic",
+        "owner": "vic",
+        "repo": "checkmate",
+        "type": "github"
+      }
     }
   },
   "root": "root",
