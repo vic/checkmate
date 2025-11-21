@@ -15,11 +15,11 @@
 
 - treefmt - nixfmt, deadnix, mdformat, yamlfmt. See `treefmt.nix`.
 
-- nix-unit - The flake being checked (ie, `inputs.target`) is expected to expose `flakeModules.checkmate`:
+- nix-unit - The flake being checked is available as `inputs.target`
 
 ### Extensible.
 
-Checkmate is a collection of Denritic modules.
+Checkmate is a collection of Dendritic modules.
 
 ### Getting started
 
@@ -65,4 +65,6 @@ $GITHUB_SHA
 
 As a fully working example, see:
 
-https://github.com/vic/import-tree
+- https://github.com/vic/import-tree
+- https://github.com/vic/flake-aspects
+- https://github.com/vic/den
