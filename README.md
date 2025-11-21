@@ -52,19 +52,20 @@ On your github action:
 on:
   pull_request:
   push:
-    branches: [main]
 jobs:
-  flake-check:
-    name: nix flake check
+  checkmate:
+    name: checkmate
     runs-on: ubuntu-latest
     steps:
       - uses: cachix/install-nix-action@v30
-      - run: nix flake check -L github:vic/checkmate --override-input target github:$GITHUB_REPOSITORY/
-$GITHUB_SHA
+      - run: nix flake check -L github:vic/checkmate --override-input target github:$GITHUB_REPOSITORY/$GITHUB_SHA
 ```
 
-As a fully working example, see:
+### Examples
 
+Some repos being tested with `checkmate`:
+
+- https://github.com/vic/checkmate
 - https://github.com/vic/import-tree
 - https://github.com/vic/flake-aspects
 - https://github.com/vic/den
