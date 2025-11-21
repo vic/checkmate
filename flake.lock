@@ -67,11 +67,11 @@
     },
     "import-tree": {
       "locked": {
-        "lastModified": 1763673815,
-        "narHash": "sha256-vlkLsqaTqSVuIKA9xLPGmemXNekU3OVhpXs5HF1Nv14=",
+        "lastModified": 1763695721,
+        "narHash": "sha256-tMfN/JkwWJ129cXDW+lK2gUcjklJ+LpTHj9LlneJRXg=",
         "owner": "vic",
         "repo": "import-tree",
-        "rev": "6cef16391ec216f50847a5923100ee5ebc709c00",
+        "rev": "ca69d64711265c68cf71f6c029ab9f1a55a767f8",
         "type": "github"
       },
       "original": {
@@ -177,11 +177,11 @@
     "target": {
       "locked": {
         "dir": "templates/success",
-        "lastModified": 1763694353,
-        "narHash": "sha256-W5U42yzaKukUDDggnq1gaVo8dATcuDoj5kVt7cqFD6E=",
+        "lastModified": 1763697157,
+        "narHash": "sha256-dBACJcL+a+C6AZpC2wZoSUFY17VojQJVeMP/EGmkqF0=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "f2bbf487cb5e730f357faef65ecb73fa12a568b5",
+        "rev": "20d7bcb9b07800207111f85eea5200e67ed051ab",
         "type": "github"
       },
       "original": {

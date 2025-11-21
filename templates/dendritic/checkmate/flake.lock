@@ -2,7 +2,6 @@
   "nodes": {
     "checkmate": {
       "inputs": {
-        "checkmate": "checkmate_2",
         "den": [
           "den"
         ],
@@ -38,229 +37,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763694529,
-        "narHash": "sha256-J4jP3+mYieIhkZ058Nc8knaI4GpKQCOh/0CtzIjl75g=",
+        "lastModified": 1763697157,
+        "narHash": "sha256-dBACJcL+a+C6AZpC2wZoSUFY17VojQJVeMP/EGmkqF0=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "45722f14619067e6ae10c2b75b917715f0eb970d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "checkmate",
-        "type": "github"
-      }
-    },
-    "checkmate_2": {
-      "inputs": {
-        "checkmate": "checkmate_3",
-        "den": [
-          "checkmate",
-          "den"
-        ],
-        "flake-aspects": [
-          "checkmate",
-          "flake-aspects"
-        ],
-        "flake-file": [
-          "checkmate",
-          "flake-file"
-        ],
-        "flake-parts": [
-          "checkmate",
-          "flake-parts"
-        ],
-        "import-tree": [
-          "checkmate",
-          "import-tree"
-        ],
-        "nix-unit": [
-          "checkmate",
-          "nix-unit"
-        ],
-        "nixpkgs": [
-          "checkmate",
-          "nixpkgs"
-        ],
-        "nixpkgs-lib": [
-          "checkmate",
-          "nixpkgs"
-        ],
-        "systems": [
-          "checkmate",
-          "systems"
-        ],
-        "target": [
-          "checkmate",
-          "target"
-        ],
-        "treefmt-nix": [
-          "checkmate",
-          "treefmt-nix"
-        ]
-      },
-      "locked": {
-        "lastModified": 1763694353,
-        "narHash": "sha256-W5U42yzaKukUDDggnq1gaVo8dATcuDoj5kVt7cqFD6E=",
-        "owner": "vic",
-        "repo": "checkmate",
-        "rev": "f2bbf487cb5e730f357faef65ecb73fa12a568b5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "checkmate",
-        "type": "github"
-      }
-    },
-    "checkmate_3": {
-      "inputs": {
-        "checkmate": "checkmate_4",
-        "den": [
-          "checkmate",
-          "checkmate",
-          "den"
-        ],
-        "flake-aspects": [
-          "checkmate",
-          "checkmate",
-          "flake-aspects"
-        ],
-        "flake-file": [
-          "checkmate",
-          "checkmate",
-          "flake-file"
-        ],
-        "flake-parts": [
-          "checkmate",
-          "checkmate",
-          "flake-parts"
-        ],
-        "import-tree": [
-          "checkmate",
-          "checkmate",
-          "import-tree"
-        ],
-        "nix-unit": [
-          "checkmate",
-          "checkmate",
-          "nix-unit"
-        ],
-        "nixpkgs": [
-          "checkmate",
-          "checkmate",
-          "nixpkgs"
-        ],
-        "nixpkgs-lib": [
-          "checkmate",
-          "checkmate",
-          "nixpkgs"
-        ],
-        "systems": [
-          "checkmate",
-          "checkmate",
-          "systems"
-        ],
-        "target": [
-          "checkmate",
-          "checkmate",
-          "target"
-        ],
-        "treefmt-nix": [
-          "checkmate",
-          "checkmate",
-          "treefmt-nix"
-        ]
-      },
-      "locked": {
-        "lastModified": 1763693729,
-        "narHash": "sha256-AWXVFz1VVHJXEFrAaiMO52o495Zkg4fgSNliXjO5odQ=",
-        "owner": "vic",
-        "repo": "checkmate",
-        "rev": "b196737de43e57d96652aaf4cb4ad94569f8fea0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "checkmate",
-        "type": "github"
-      }
-    },
-    "checkmate_4": {
-      "inputs": {
-        "den": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "den"
-        ],
-        "flake-aspects": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "flake-aspects"
-        ],
-        "flake-file": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "flake-file"
-        ],
-        "flake-parts": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "flake-parts"
-        ],
-        "import-tree": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "import-tree"
-        ],
-        "nix-unit": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "nix-unit"
-        ],
-        "nixpkgs": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "nixpkgs"
-        ],
-        "nixpkgs-lib": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "nixpkgs"
-        ],
-        "systems": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "systems"
-        ],
-        "target": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "target"
-        ],
-        "treefmt-nix": [
-          "checkmate",
-          "checkmate",
-          "checkmate",
-          "treefmt-nix"
-        ]
-      },
-      "locked": {
-        "lastModified": 1763688964,
-        "narHash": "sha256-xJ3g37BgPgIKNrUT9wo/QCDXpo5P/KZA3wjT9ETmc8o=",
-        "owner": "vic",
-        "repo": "checkmate",
-        "rev": "7add32917422eb14bf09560f9686d19232745ae1",
+        "rev": "20d7bcb9b07800207111f85eea5200e67ed051ab",
         "type": "github"
       },
       "original": {
@@ -447,11 +228,11 @@
     "target": {
       "locked": {
         "dir": "templates/dendritic",
-        "lastModified": 1763694529,
-        "narHash": "sha256-J4jP3+mYieIhkZ058Nc8knaI4GpKQCOh/0CtzIjl75g=",
+        "lastModified": 1763697157,
+        "narHash": "sha256-dBACJcL+a+C6AZpC2wZoSUFY17VojQJVeMP/EGmkqF0=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "45722f14619067e6ae10c2b75b917715f0eb970d",
+        "rev": "20d7bcb9b07800207111f85eea5200e67ed051ab",
         "type": "github"
       },
       "original": {
