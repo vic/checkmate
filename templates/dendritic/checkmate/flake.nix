@@ -5,6 +5,10 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
+    checkmate-modules = {
+      flake = false;
+      url = "path:/home/vic/hk/checkmate/modules/checkmate";
+    };
     den = {
       url = "github:vic/den";
     };
@@ -25,17 +29,6 @@
     import-tree = {
       url = "github:vic/import-tree";
     };
-    nix-unit = {
-      inputs = {
-        flake-parts = {
-          follows = "flake-parts";
-        };
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:nix-community/nix-unit";
-    };
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
@@ -46,15 +39,7 @@
       url = "github:nix-systems/default";
     };
     target = {
-      url = "github:vic/empty-flake";
-    };
-    treefmt-nix = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:numtide/treefmt-nix";
+      url = "path:..";
     };
   };
 
