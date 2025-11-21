@@ -11,7 +11,7 @@ jobs:
         include:
           - checker: "./templates/dendritic/checkmate"
             target: "./templates/dendritic"
-    name: flake check ${{matrix.dir}}
+    name: flake check ${{matrix.target}}
     runs-on: ubuntu-latest
     steps:
       - uses: cachix/install-nix-action@v30
