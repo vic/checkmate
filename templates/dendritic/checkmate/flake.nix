@@ -7,8 +7,6 @@
   inputs = {
     checkmate = {
       inputs = {
-        den.follows = "den";
-        flake-aspects.follows = "flake-aspects";
         flake-file.follows = "flake-file";
         flake-parts.follows = "flake-parts";
         import-tree.follows = "import-tree";
@@ -21,8 +19,6 @@
       };
       url = "github:vic/checkmate";
     };
-    den.url = "github:vic/den";
-    flake-aspects.url = "github:vic/flake-aspects";
     flake-file.url = "github:vic/flake-file";
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";

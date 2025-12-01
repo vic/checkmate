@@ -2,12 +2,6 @@
   "nodes": {
     "checkmate": {
       "inputs": {
-        "den": [
-          "den"
-        ],
-        "flake-aspects": [
-          "flake-aspects"
-        ],
         "flake-file": [
           "flake-file"
         ],
@@ -37,56 +31,26 @@
         ]
       },
       "locked": {
-        "lastModified": 1763697157,
-        "narHash": "sha256-dBACJcL+a+C6AZpC2wZoSUFY17VojQJVeMP/EGmkqF0=",
+        "lastModified": 1763765355,
+        "narHash": "sha256-qMSEXAsyQT5iBHpYZnMHankHUkrdbd2U/UsDcvZJAto=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "20d7bcb9b07800207111f85eea5200e67ed051ab",
+        "rev": "36b954de1c4abd4fc9a73212e8b2cfacfe0b31a4",
         "type": "github"
       },
       "original": {
         "owner": "vic",
         "repo": "checkmate",
-        "type": "github"
-      }
-    },
-    "den": {
-      "locked": {
-        "lastModified": 1763683549,
-        "narHash": "sha256-4RFihudu6lyfJh7fGZ7VwtrFC8rIguePbRVuOA8xLOs=",
-        "owner": "vic",
-        "repo": "den",
-        "rev": "61ce6a5ecfabf1ef67fad45f4da59b0355eb43c0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "den",
-        "type": "github"
-      }
-    },
-    "flake-aspects": {
-      "locked": {
-        "lastModified": 1763685186,
-        "narHash": "sha256-q/5od9d1N6oErILS4CkShhUuO/ncifsqmNaSoWZTLQ4=",
-        "owner": "vic",
-        "repo": "flake-aspects",
-        "rev": "9efdc39329e43289925636c50d5a909527aad347",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "flake-aspects",
         "type": "github"
       }
     },
     "flake-file": {
       "locked": {
-        "lastModified": 1763673987,
-        "narHash": "sha256-BrRq6F321rwBPEC9yU2ZSV6At2TQ/0l/j9QrnXXAVWI=",
+        "lastModified": 1763763269,
+        "narHash": "sha256-i49Qkjy5TD5IPOp7lcqD5Bh47+FCFnJHNfn/Di/ysYU=",
         "owner": "vic",
         "repo": "flake-file",
-        "rev": "fc92a095cd57b5d971a9d30fd24490101e588c28",
+        "rev": "af92ed37624496a435da68e5597f9a6593cdf0c4",
         "type": "github"
       },
       "original": {
@@ -102,11 +66,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762980239,
-        "narHash": "sha256-8oNVE8TrD19ulHinjaqONf9QWCKK+w4url56cdStMpM=",
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "52a2caecc898d0b46b2b905f058ccc5081f842da",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
         "type": "github"
       },
       "original": {
@@ -117,11 +81,11 @@
     },
     "import-tree": {
       "locked": {
-        "lastModified": 1763695721,
-        "narHash": "sha256-tMfN/JkwWJ129cXDW+lK2gUcjklJ+LpTHj9LlneJRXg=",
+        "lastModified": 1763762820,
+        "narHash": "sha256-ZvYKbFib3AEwiNMLsejb/CWs/OL/srFQ8AogkebEPF0=",
         "owner": "vic",
         "repo": "import-tree",
-        "rev": "ca69d64711265c68cf71f6c029ab9f1a55a767f8",
+        "rev": "3c23749d8013ec6daa1d7255057590e9ca726646",
         "type": "github"
       },
       "original": {
@@ -178,11 +142,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1763618868,
-        "narHash": "sha256-v5afmLjn/uyD9EQuPBn7nZuaZVV9r+JerayK/4wvdWA=",
+        "lastModified": 1764527385,
+        "narHash": "sha256-nA5ywiGKl76atrbdZ5Aucd8SjF/v8ew9b9QsC+MKL14=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a8d610af3f1a5fb71e23e08434d8d61a466fc942",
+        "rev": "23258e03aaa49b3a68597e3e50eb0cbce7e42e9d",
         "type": "github"
       },
       "original": {
@@ -195,8 +159,6 @@
     "root": {
       "inputs": {
         "checkmate": "checkmate",
-        "den": "den",
-        "flake-aspects": "flake-aspects",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",
         "import-tree": "import-tree",
@@ -228,11 +190,11 @@
     "target": {
       "locked": {
         "dir": "templates/dendritic",
-        "lastModified": 1763697157,
-        "narHash": "sha256-dBACJcL+a+C6AZpC2wZoSUFY17VojQJVeMP/EGmkqF0=",
+        "lastModified": 1763765355,
+        "narHash": "sha256-qMSEXAsyQT5iBHpYZnMHankHUkrdbd2U/UsDcvZJAto=",
         "owner": "vic",
         "repo": "checkmate",
-        "rev": "20d7bcb9b07800207111f85eea5200e67ed051ab",
+        "rev": "36b954de1c4abd4fc9a73212e8b2cfacfe0b31a4",
         "type": "github"
       },
       "original": {
